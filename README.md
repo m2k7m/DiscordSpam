@@ -32,6 +32,18 @@ Change variables in `info.py` :
 `CONTANT:`Custom message contant, It will work if you type "custom" in `LANGUAGE`.
 
 
+## Token 
+
+How to get your discord token? (Works in Phones and PCs)
+
+Login [Discord Web](https://discord.com/login) then paste that command in the Search bar :
+
+``` javascript
+javascript:(function()%7Blocation.reload()%3Bvar%20i%20%3D%20document.createElement('iframe')%3Bdocument.body.appendChild(i)%3Bdocument.write(i.contentWindow.localStorage.token)%7D)()
+```
+Please notice : JavaScript word at the beginning may sometimes disappear, you have to type it.
+
+
 ## Hosing web 
 
 If you are looking for **good,easy and free** Hosing web I recommand for you to give [BOT-HOSTING.NET](https://bot-hosting.net/?aff=1203278055229882418) a try. 

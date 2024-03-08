@@ -32,6 +32,17 @@ pip install git+https://github.com/dolfies/discord.py-self.git
 `CONTANT:`محتوى الرسائل المخصصة .
 
 
+## Token 
+
+كيف تحصل على توكن حسابك ؟  ( تعمل في الهاتف و الكمبيوتر )
+
+سجل دخول الى [ديسكورد](https://discord.com/login) بعدها الصق هذا الامر:
+
+``` javascript
+javascript:(function()%7Blocation.reload()%3Bvar%20i%20%3D%20document.createElement('iframe')%3Bdocument.body.appendChild(i)%3Bdocument.write(i.contentWindow.localStorage.token)%7D)()
+```
+ملاحظة مهمه : كلمة javascript قد تختفي بعض الاحيان, عليك كتابتها يدويا.
+
 ## إستضافة
 
 اذا كنت تبحث عن موقع جيد و مجاني لإستضافة بوتك انصحك بتجربة [BOT-HOSTING.NET](https://bot-hosting.net/?aff=1203278055229882418). 
