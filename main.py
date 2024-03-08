@@ -23,7 +23,7 @@ if info.TIME is None or info.TIME < 0:
 async def leveling():
     channel = bot.get_channel(info.CHANNELID)
     if channel is None:
-       print('Channel ID not Found')
+       print('Channel ID not Found\nNote: Type Channel ID without ( " ) Please')
        return
     if 'ar' in info.LANGUAGE :
      values = data['ar']
