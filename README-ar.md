@@ -1,5 +1,5 @@
 
-[English](https://github.com/m2k7m/DiscordSpam) | العربية 
+# [English](https://github.com/m2k7m/DiscordSpam) | العربية 
 
 # DiscordSpam Self-bot
 
@@ -20,11 +20,17 @@ pip install git+https://github.com/dolfies/discord.py-self.git
 
 غير المتغيرات في ملف  `info.py` :
 
-... `TOKEN:`ضع توكن حسابك هنا .
-... `CHANNELID:`غير 123 لايدي الروم .
-... `LANGUAGE:`أكتب `ar` للغة العربية و `en` للغة الاجليزية, لإستعمال الرسائل المخصصة اكتب هنا  `"custom"`.
-... `TIME:`الوقت بالثواني 120 = دقيقتان .
-... `CONTANT:`محتوى الرسائل المخصصة .
+
+`TOKEN:`ضع توكن حسابك هنا .
+
+`CHANNELID:`غير 123 لايدي الروم .
+
+`LANGUAGE:`أكتب `ar` للغة العربية و `en` للغة الاجليزية, لإستعمال الرسائل المخصصة اكتب هنا  `"custom"`.
+
+`TIME:`الوقت بالثواني 120 = دقيقتان .
+
+`CONTANT:`محتوى الرسائل المخصصة .
+
 
 ## إستضافة
 

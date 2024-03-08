@@ -1,5 +1,5 @@
 
-English | [العربية](https://github.com/m2k7m/DiscordSpam/blob/main/README-ar.md)
+# English | [العربية](https://github.com/m2k7m/DiscordSpam/blob/main/README-ar.md)
 
 # DiscordSpam Self-bot
 
@@ -21,11 +21,16 @@ or Run the script and it will install automatically.
 Change variables in `info.py` :
 
 
-*`TOKEN:`Replace With your Token.
--`CHANNELID:`Replace 123 With your Channel ID.
-+`LANGUAGE:`Languages ar = Arabic, en = English, for custom Message Type `"custom"`.
--`TIME:`Time with seconds 120s = 2m.
-+`CONTANT:`Custom message contant, It will work if you type "custom" in `LANGUAGE`.
+`TOKEN:`Replace With your Token.
+
+`CHANNELID:`Replace 123 With your Channel ID.
+
+`LANGUAGE:`Languages ar = Arabic, en = English, for custom Message Type `"custom"`.
+
+`TIME:`Time with seconds 120s = 2m.
+
+`CONTANT:`Custom message contant, It will work if you type "custom" in `LANGUAGE`.
+
 
 ## Hosing web 
 
