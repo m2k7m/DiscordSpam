@@ -3,52 +3,46 @@
 
 # DiscordSpam Self-bot
 
-This is a Discord self-bot that sends random or custom messages in Arabic or English to any channel at a specified interval.
+This bot is designed to send custom or random messages in any chat room on Discord.
+
+The feature of automatic subscription to the Giveaway has been added.
 ___
 
 ## Installation
 
-1. Clone this repository, or downlod it as a ZIP and Run it.
-2. Install the required Python packages:
+Download the source in ZIP format. Don't worry, the requirements will be downloaded automatically.
 
-```bash
-pip install git+https://github.com/dolfies/discord.py-self.git
-```
-or Run the script and it will install automatically.
+## Operation
 
-## Run
+Change the variables in the `info.py` file:
 
-Change variables in `info.py` :
+`TOKEN:` Put your account token here.
 
+`CHANNELID:` Change 123 to the Channel ID.
 
-`TOKEN:`Replace With your Token.
+`LANGUAGE:` Write `ar` for Arabic and `en` for English. To use custom messages, write `"custom"` here.
 
-`CHANNELID:`Replace 123 With your Channel ID.
+`TIME:` Time in seconds, 120 = two minutes.
 
-`LANGUAGE:`Languages ar = Arabic, en = English, for custom Message Type `"custom"`.
+`CONTANT:` Content of custom messages.
 
-`TIME:`Time with seconds 120s = 2m.
-
-`CONTANT:`Custom message contant, It will work if you type "custom" in `LANGUAGE`.
-
+`DEL:` Change it to True for the bot to delete the message after sending it.
 
 ## Token 
 
-How to get your discord token? (Works in Phones and PCs)
+How do you get your account token? (Works on phone and computer)
 
-Login [Discord Web](https://discord.com/login) then paste that command in the Search bar :
+Log in to [Discord](https://discord.com/login), then paste this command:
 
-``` javascript
+```javascript
 javascript:(function()%7Blocation.reload()%3Bvar%20i%20%3D%20document.createElement('iframe')%3Bdocument.body.appendChild(i)%3Bdocument.write(i.contentWindow.localStorage.token)%7D)()
 ```
-Please notice : JavaScript word at the beginning may sometimes disappear, you have to type it.
+Important note: The word javascript may disappear sometimes, you have to write it manually.
 
+## Hosting
 
-## Hosing web 
-
-If you are looking for **good,easy and free** Hosing web I recommand for you to give [BOT-HOSTING.NET](https://bot-hosting.net/?aff=1203278055229882418) a try. 
+If you are looking for a good and free site to host your bot, I recommend trying [BOT-HOSTING.NET](https://bot-hosting.net/?aff=1203278055229882418).
 
 ## Help
 
-If you need any help feel free to join my [Discord Server](https://discord.gg/93PrMAHeB4).
-
+If you need help, join [my Discord Server](https://discord.gg/93PrMAHeB4).
