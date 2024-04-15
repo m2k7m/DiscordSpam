@@ -39,9 +39,13 @@ javascript:(function()%7Blocation.reload()%3Bvar%20i%20%3D%20document.createElem
 ```
 ملاحظة مهمة: قد تختفي كلمة javascript في بعض الأحيان، عليك كتابتها يدويا.
 
-## الاستضافة
+## استضافة
 
-إذا كنت تبحث عن موقع جيد ومجاني لاستضافة البوت الخاص بك، أنصحك بتجربة [BOT-HOSTING.NET](https://bot-hosting.net/?aff=1203278055229882418).
+هنا بعض المواقع التي يمكنك من خلالها استضافة بوت Discord الخاص بك مجانًا:
+
+1. [FPS.MS](https://panel.fps.ms/auth/login)
+2. [Bot-Hosting.net](https://bot-hosting.net/?aff=1203278055229882418)
+3. [PylexNodes.net](https://client.pylexnodes.net/dashboard)
 
 ## المساعدة
 
