@@ -39,9 +39,13 @@ javascript:(function()%7Blocation.reload()%3Bvar%20i%20%3D%20document.createElem
 ```
 Important note: The word javascript may disappear sometimes, you have to write it manually.
 
-## Hosting
+## Bot Hosting
 
-If you are looking for a good and free site to host your bot, I recommend trying [BOT-HOSTING.NET](https://bot-hosting.net/?aff=1203278055229882418).
+Here are some websites where you can host your Discord bot for free:
+
+1. [FPS.MS](https://panel.fps.ms/auth/login)
+2. [Bot-Hosting.net](https://bot-hosting.net/?aff=1203278055229882418)
+3. [PylexNodes.net](https://client.pylexnodes.net/dashboard)
 
 ## Help
 
