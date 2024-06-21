@@ -1,17 +1,19 @@
-import info,json,random,sys,subprocess,asyncio
+import json,random,asyncio,yaml
+from discord import *
 from discord.ext import tasks,commands
 from random import randint
 
-def install(package):
-    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
-
-install('git+https://github.com/dolfies/discord.py-self.git')
-
 bot = commands.Bot(command_prefix='!')
-ban = []
+
+with open("config.yml","r",encoding="utf8") as f:
+    config = yaml.safe_load(f)
 
 with open('languages.json', 'r', encoding='utf-8') as f:
     data = json.load(f)
+
+if config["TIME"] is None or config["TIME"] < 0:
+    input('Check TIME in config.yml')
+    exit()
 
 @bot.event
 async def on_ready():
@@ -19,36 +21,53 @@ async def on_ready():
     leveling.start()
 
 @bot.event
-async def autoReaction(reaction, user):
+async def autoReaction(reaction:Reaction, user:User):
     if reaction.emoji == "🎉":
         if user.bot:
             await asyncio.sleep(round(randint(5,10)))
             await reaction.message.add_reaction("🎉")
-            ban.append(reaction.message.id)
 
-if info.TIME is None or info.TIME < 0:
-    print('Check TIME in info.py')
-    exit()
-
-@tasks.loop(seconds=info.TIME)
+@tasks.loop(seconds=config["TIME"])
 async def leveling():
-    channel = bot.get_channel(info.CHANNELID)
+    channel = bot.get_channel(config["CHANNELID"])
     if channel is None:
-       print('Channel ID not Found\nNote: Type Channel ID without ( " ) Please')
-       return
-    if 'ar' in info.LANGUAGE :
+       input('Channel ID not Found\nNote: Type Channel ID without ( " ) Please')
+       exit()
+    if config["LANGUAGE"] == "ar" :
        values = data['ar']
        if isinstance(values, list):
         random_ar = random.choice(values)
-        message = await channel.send(content=random_ar)
-    elif 'en' in info.LANGUAGE :
+        message = await channel.send(random_ar)
+    elif config["LANGUAGE"] == "en" :
        values = data['en']
        if isinstance(values, list):
         random_en = random.choice(values)
-        message = await channel.send(content=random_en)
+        message = await channel.send(random_en)
     else:
-       message = await channel.send(content=info.CONTANT)
-    if info.DEL == True:
+       message = await channel.send(config["CONTANT"])
+    if config["DEL"] == True or config["DEL"] is True:
         await message.delete(delay=5)
 
-bot.run(info.TOKEN)
+@bot.event
+async def on_message(message:Message):
+    if message.author != bot.user:
+        return
+    elif message.content.startswith('!v'):
+        channel_id = int(message.content.split(' ')[1])
+        c = bot.get_channel(channel_id)
+        if c:
+            if bot.voice_clients:
+                await bot.voice_clients[0].disconnect()
+            await c.connect(self_deaf=True,self_mute=True)
+            await message.edit(content=f"Connected to **{c.name}**.")
+        else:
+            await message.edit(content="Invalid channel ID. Please provide a valid voice channel ID.")
+    elif message.content == '!l':
+        if bot.voice_clients:
+            vc = bot.voice_clients[0]
+            await vc.disconnect()
+            await message.edit(content=f"Disconnected from **{vc.channel.name}**.")
+        else:
+            await message.edit(content="Not connected to any voice channel.")
+
+bot.run(config["TOKEN"])
