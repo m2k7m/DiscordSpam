@@ -11,7 +11,7 @@ You can now AFK in any Voice Channel you want Using !v Voice Channel ID.
 
 ## Installation
 
-1 - Download the source in ZIP format.
+1 - Download the source in ZIP format.<br>
 2 - Run This Command
 ```bash
 pip install -r requirements.txt
